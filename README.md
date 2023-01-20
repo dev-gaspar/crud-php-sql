@@ -1,8 +1,11 @@
 # crud-php-sql (php 5.6.33)
+
 El proyecto CRUD de Facturas es una aplicación web desarrollada en PHP y MySQL que permite llevar un registro de las facturas de una empresa.
 
 ## Configuracion de base de datos
+
 - Crear una bd que se llame facturas y dentro de esta ejecutar esta query desde un manejador de base de datos(mi caso utilieze phpMyAdmin) para crear la tabla que se utilizara para guardar los datos:
+
 ```sql:
 CREATE TABLE facturas (
     numero INT PRIMARY KEY,
@@ -13,6 +16,7 @@ CREATE TABLE facturas (
 ```
 
 - Asignar los valores correspondientes de las credenciales de la base de datos en el archivo bd.php que esta dentro de la carpeta incluides del proyecto:
+
 ```php:
 $host = "localhost";
 $username = "root";
@@ -22,9 +26,10 @@ $dbname = "facturas";
 ```
 
 - Todo estara listo, te dejo adicional una query que inserta 15 datos de prueba dentro de la tabla facturas:
+
 ```sql:
 INSERT INTO facturas (numero, fecha, cliente, monto)
-VALUES (1, '2022-01-01', 'Juan Perez', 100), 
+VALUES (1, '2022-01-01', 'Juan Perez', 100),
        (2, '2022-01-02', 'Maria Rodriguez', 200),
        (3, '2022-01-03', 'Carlos Hernandez', 300),
        (4, '2022-01-04', 'Ana Lopez', 400),
@@ -43,4 +48,8 @@ VALUES (1, '2022-01-01', 'Juan Perez', 100),
 
 ## Vistas del crud:
 
-- ![Aquí la descripción de la imagen por si no carga](https://raw.githubusercontent.com/parzibyte/WaterPy/master/assets/ImagenV1.png)
+![Vista de listado de facturas](https://raw.githubusercontent.com/dev-gaspar/crud-php-sql/main/assets/inicio.png)
+
+![Vista de listado de facturas](https://raw.githubusercontent.com/dev-gaspar/crud-php-sql/main/assets/nueva_factura.png)
+
+![Vista de listado de facturas](https://raw.githubusercontent.com/dev-gaspar/crud-php-sql/main/assets/editar_factura.png)
